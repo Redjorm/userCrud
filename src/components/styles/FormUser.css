@@ -1,0 +1,120 @@
+.form-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0002;
+    backdrop-filter: blur(0.8px);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 400ms ease;
+}
+
+.close{
+    transform: scale(0);
+}
+
+.form {
+    background-color: white;
+    width: 100%;
+    max-width: 320px;
+    padding: 3em 1.5em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+}
+
+.form__exit{
+    position: absolute;
+    right: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 1.3em;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 400ms ease, color 400ms ease;
+}
+
+.form__exit:hover{
+    background-color: #555A88;
+    color: white;
+}
+
+.form__title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.form__item-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.label{
+    position: absolute;
+    left: 0;
+    background-color: rgb(161, 161, 161);
+    font-size: 1.3rem;
+    color: white;
+    height: 24px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em 0 0 0.2em;
+}
+
+.birthday{
+    height: 22px;
+    width: 26px;
+}
+
+.input{
+    margin-left: 1.6em;
+    border-radius: 0 0.2em 0.2em 0;
+    border: 1px solid rgb(161, 161, 161);
+    height: 20px;
+    width: 90%;
+}
+
+.error{
+    margin-top: 0.4em;
+    background-color: rgba(255, 0, 0, 0.493);
+    border-radius: 0.2em;
+    padding: 0.2em;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.form__btn {
+    padding: 0.5rem;
+    background-color: #555A88;
+    color: white;
+    font-weight: 500;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
+
+.form__btn:hover{
+    filter: brightness(1.15);
+}

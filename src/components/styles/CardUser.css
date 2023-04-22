@@ -1,0 +1,91 @@
+.article__user{
+    border: 0.05em solid #aaa7;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 0.4em;
+    padding: 1em; 
+    background-color: white;
+    transition: transform 200ms ease;
+}
+
+.article__user:hover{
+   transform: scale(1.03); 
+}
+
+.article__header{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    margin-bottom: 1em;
+}
+
+.user__img{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.user__name{
+    font-weight: 500;
+    font-size: 1.1rem;
+    
+}
+
+.user__list{
+    display: grid;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.user__item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.user__label {
+    font-size: 0.8em;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.user__info{
+    display: flex;
+    gap: 0.5em;
+    position: relative;
+    left: 0.8em;
+}
+
+.article__options{
+    display: flex;
+    justify-content: end;
+    gap: 0.5em;
+}
+
+.user__btn{
+    width: 2.5em;
+    aspect-ratio: 1;
+    border-radius: 0.4em;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.user__btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.205);
+}
+
+.user__update{
+    color: #aaa;
+    border: 0.05em solid currentColor;
+}
+
+.user__delete{
+    color: white;
+    background-color: #D93F3F;
+}
+
+.user__icon{
+    font-size: 1rem;
+}

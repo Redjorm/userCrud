@@ -1,0 +1,34 @@
+.app{
+    padding: 2em 1.5em;
+}
+
+.app__header{
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: space-between;
+}
+
+.app__title{
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.app__btn{
+    background-color: #555A88;
+    color: white;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    transition: transform 200ms ease;
+}
+
+.app__btn:hover{
+    transform: scale(1.1);
+    filter: brightness(1.15);
+}
+
+.cards__user{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}

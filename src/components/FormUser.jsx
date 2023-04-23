@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import defaultValues from "../utils/defaultValues";
 import './styles/FormUser.css'
 
+
 const FormUser = ({ createUser, updateInfo, updateUserById, setUpdateInfo, setFormClose, formClose}) => {
   const {
     register,
@@ -17,7 +18,6 @@ const FormUser = ({ createUser, updateInfo, updateUserById, setUpdateInfo, setFo
     } else {
       reset(defaultValues);
     }
-    
   }, [updateInfo])
   
 

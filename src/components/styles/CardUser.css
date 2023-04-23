@@ -89,3 +89,33 @@
 .user__icon{
     font-size: 1rem;
 }
+
+
+.btn-danger{
+    color: white;
+    background-color: rgba(255, 0, 0, 0.61);
+    border-radius: 0.2em;
+    padding: 0.5em;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.btn-success{
+    margin-left: 1em;
+    background-color: rgba(0, 128, 0, 0.658);
+    border-radius: 0.2em;
+    color: white;
+    padding: 0.5em;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+
+.btn-danger:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.205);
+}
+
+
+.btn-success:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.205);
+}

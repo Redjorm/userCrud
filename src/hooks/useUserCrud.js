@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Swal from 'sweetalert2'
 
 const useUserCrud = () => {
   const [users, setusers] = useState()
@@ -18,7 +19,14 @@ const useUserCrud = () => {
   const createUser = data => {
     axios
       .post(url, data)
-      .then(res => getAllUsers())
+      .then(res => {
+        getAllUsers(),
+          Swal.fire(
+            'User created!',
+            'The user was successfully created',
+            'success'
+          )
+      })
       .catch(err => console.log(err))
   }
 
@@ -36,11 +44,18 @@ const useUserCrud = () => {
     const urlUpdate = `${url}${id}/`
     axios
       .put(urlUpdate, data)
-      .then(res => getAllUsers())
+      .then(res => {
+        getAllUsers(),
+          Swal.fire(
+            'Updated user!',
+            'The user was successfully updated',
+            'success'
+          )
+      })
       .catch(err => console.log(err))
   }
 
-  return { users, getAllUsers, createUser, deleteUserById, updateUserById}
+  return { users, getAllUsers, createUser, deleteUserById, updateUserById }
 }
 
 export default useUserCrud

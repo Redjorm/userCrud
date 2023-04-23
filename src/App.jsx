@@ -3,6 +3,7 @@ import "./App.css";
 import FormUser from "./components/FormUser";
 import useUserCrud from "./hooks/useUserCrud";
 import CardUser from "./components/CardUser";
+import './components/styles/SweetAlert2.min.css'
 
 function App() {
   const [updateInfo, setUpdateInfo] = useState();

@@ -54,13 +54,7 @@ function App() {
         </div>
       ) : (
         <div className="loading__app">
-          <div class="lds-grid">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+          <div class="lds-facebook">
             <div></div>
             <div></div>
             <div></div>

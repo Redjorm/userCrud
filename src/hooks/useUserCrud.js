@@ -27,7 +27,11 @@ const useUserCrud = () => {
             'success'
           )
       })
-      .catch(err => console.log(err))
+      .catch(err => {Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!'
+      })})
   }
 
   //DELETE
@@ -36,7 +40,13 @@ const useUserCrud = () => {
     axios
       .delete(urlDelete)
       .then(res => getAllUsers())
-      .catch(err => console.log(err))
+      .catch(err => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!'
+        })
+      })
   }
 
   //UPDATE
@@ -52,7 +62,13 @@ const useUserCrud = () => {
             'success'
           )
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!'
+        })
+      })
   }
 
   return { users, getAllUsers, createUser, deleteUserById, updateUserById }

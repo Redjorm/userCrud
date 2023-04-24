@@ -3,7 +3,7 @@ import "./App.css";
 import FormUser from "./components/FormUser";
 import useUserCrud from "./hooks/useUserCrud";
 import CardUser from "./components/CardUser";
-import './components/styles/SweetAlert2.min.css'
+import "./components/styles/SweetAlert2.min.css";
 
 function App() {
   const [updateInfo, setUpdateInfo] = useState();
@@ -18,7 +18,7 @@ function App() {
 
   const handleOpenForm = () => {
     setFormClose(false);
-    setUpdateInfo()
+    setUpdateInfo();
   };
 
   return (
@@ -39,18 +39,34 @@ function App() {
         formClose={formClose}
       />
 
-      <div className="cards__user">
-        {users?.map((user) => (
-          <CardUser
-            user={user}
-            setUpdateInfo={setUpdateInfo}
-            deleteUserById={deleteUserById}
-            key={user.id}
-            setFormClose={setFormClose}
-            formClose={formClose}
-          />
-        ))}
-      </div>
+      {users ? (
+        <div className="cards__user">
+          {users?.map((user) => (
+            <CardUser
+              user={user}
+              setUpdateInfo={setUpdateInfo}
+              deleteUserById={deleteUserById}
+              key={user.id}
+              setFormClose={setFormClose}
+              formClose={formClose}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="loading__app">
+          <div class="lds-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
